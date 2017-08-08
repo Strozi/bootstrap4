@@ -10,11 +10,47 @@
   </head>
   <body>
 
-    <div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+    <style>
+      .jumbotron {
+        background: url("/img/land.jpg");
+        background-size: cover;
+        background-overflow: visible;
+      }
+      nav.navbar{
+        background: transparent;
+      }
+      button.navbar-toggler{
+        border-color: white;
+      }
+      span.navbar-toggler-icon{
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        color: white;
+      }
+      span.badge{
+        background: #d9534f;
+      }
+    </style>
+
+    <div class="jumbotron jumbotron-fluid text-white text-center">
+      <nav class="navbar navbar-toggleable navbar-transparent">
+        <div class="container">
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active h3" href="#">Home</a>
+              <a class="nav-item nav-link h3" href="#">About</a>
+              <a class="nav-item nav-link h3" href="#">New Recipes <span class="badge" >6</span></a>
+              <a class="nav-item nav-link h3" href="#">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
       <div class="container">
-        <h1 class="display-1">Welcome to the Dojo!</h1>
-        <p class="lead">
-          A guiding Light for the less enlightened
+        <h1 class="display-3">Welcome to your Recipe Book!</h1>
+        <p class="lead font-weight-bold">
+          Where great recipes happend!
         </p>
       </div>
     </div>
@@ -25,12 +61,11 @@
       <div class="row">
         <div class="col-md-6 col-lg-3">
           <div class="card">
-            <img src="  /img/node.png" / class="card-img-top img-fluid">
+            <img src="  /img/musaka.jpg" / class="card-img-top img-fluid">
             <div class="card-block">
-              <h3 class="card-title">Node.js Training</h3>
+              <h3 class="card-title">Musaka</h3>
               <p>
-                Bacon ipsum dolor amet cow chicken bacon, porchetta biltong short loin kielbasa.
-                Capicola short ribs pig meatloaf leberkas chicken, cupim meatball.
+                Przepyszna grecka zapiekanka która przeniesie Cię w śródziemnomorski klimat i pozwoli zrelaksować się przy rodzinnym obiedzie
               </p>
             </div>
           </div>
@@ -38,12 +73,11 @@
 
         <div class="col-md-6 col-lg-3">
           <div class="card">
-            <img src="  /img/mongo.png" / class="card-img-top img-fluid">
+            <img src="  /img/hamburger.jpg" / class="card-img-top img-fluid">
             <div class="card-block">
-              <h3 class="card-title">Mongo Training</h3>
+              <h3 class="card-title">Hamburger</h3>
               <p>
-                 Salami frankfurter pork, pastrami chicken pork belly kevin.
-                 Bacon shankle venison, corned beef pastrami pancetta shank.
+                 Prawdziwy amerykański klasyk podany z chrupiącymi frytkami i wyrazistym sosem BBQ
               </p>
             </div>
           </div>
@@ -51,12 +85,11 @@
 
         <div class="col-md-6 col-lg-3">
           <div class="card">
-            <img src="  /img/react.png" / class="card-img-top img-fluid">
+            <img src="  /img/zupa.jpg" / class="card-img-top img-fluid">
             <div class="card-block">
-              <h3 class="card-title">React.js Training</h3>
+              <h3 class="card-title">Pieczarkowa</h3>
               <p>
-                Sausage pork belly venison pig bresaola.
-                Boudin ball tip tenderloin brisket turkey pastrami tongue tail shank rump ham doner turducken prosciutto short loin.
+                Gęsta i rozgrzewająca zupa-krem z pieczarek zabielona naturalną śmietanką
               </p>
             </div>
           </div>
@@ -64,15 +97,46 @@
 
         <div class="col-md-6 col-lg-3">
           <div class="card">
-            <img src="  /img/webpack.png" / class="card-img-top img-fluid">
+            <img src="  /img/cake.jpg" / class="card-img-top img-fluid">
             <div class="card-block">
-              <h3 class="card-title">Webpack.js Training</h3>
+              <h3 class="card-title">Torcik owocowy</h3>
               <p>
-                Meatloaf pig pork belly, leberkas flank t-bone ham hock kevin.
-                Shoulder short loin alcatra tail strip steak, short ribs cow beef chicken beef ribs burgdoggen doner turducken pastrami.
+                Lekki ale bardzo słodki i zarazem owocowy torcik idealny na przyjęcie urodzinowe dla najmodszych
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <h2 class="display-4 text-center py-5 my-4">Więcej przepisów</h2>
+      <nav class="nav justify-content-center nav-pills flex-column flex-md-row">
+        <a class="nav-link active" href="#lidl" data-toggle="tab">Kuchnia Lidla</a>
+        <a class="nav-link" href="#mirabelka" data-toggle="tab">Mirabelkowy</a>
+        <a class="nav-link" href="#pascal" data-toggle="tab">Pascal Brodnicki</a>
+        <a class="nav-link" href="#jadlo" data-toggle="tab">Jadłonomia</a>
+      </nav>
+
+
+      <div class="tab-content py-5">
+        <div class="tab-pane active" id="lidl">
+          <h3>Kuchnia Lidla</h3>
+          <p>Kuchnia dowodzona przez <span data-toggle="tooltip" title="Polski mistrz kuchni :)" class="text-info">Karola Okrasę</span>, posiada w swojej kolekcji ciekawe przepisy na każdą kieszeń.</p>
+          <a target="_blank" href="https://kuchnialidla.pl">Sprawdź!</a>
+        </div>
+        <div class="tab-pane" id="mirabelka">
+          <h3>Mirabelkowy</h3>
+          <p>Proste ale też wyszukane przepisy na każdą kieszeń</p>
+          <a target="_blank" href="http://mirabelkowy.pl">Sprawdź!</a>
+        </div>
+        <div class="tab-pane" id="pascal">
+          <h3>Pascal Brodnicki</h3>
+          <p>Swój kunszt kucharski doskonalił we Francji. Polaków czaruje autorskimi pomysłami na znane potrawy, ale też wasnymi pomysłami.  <span data-toggle="tooltip" title="https://www.youtube.com/user/BrodnickiPascal/" class="text-info">Na swoim kanale na YouTube </span>udziela wielu ciekawych porad.</p>
+          <a target="_blank" href="http://pascalbrodnicki.pl/">Sprawdź!</a>
+        </div>
+        <div class="tab-pane" id="jadlo">
+          <h3>Jadłonomia</h3>
+          <p>Vege vege vege vege</p>
+          <a target="_blank" href="http://www.jadlonomia.com/">Sprawdź!</a>
         </div>
       </div>
 
@@ -82,5 +146,11 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <script>
+      $(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
   </body>
 </html>
